@@ -1,4 +1,102 @@
-<html>
-<h1>Farewell Party</h1>
-<p>YOU are officially welcomed to the Farewell party</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Farewell Invitation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+    background:#111;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:'Playfair Display', serif;
+}
+
+.invitation{
+    width:500px;
+    padding:40px;
+    border:3px solid #caa74a;
+    text-align:center;
+    background:linear-gradient(180deg,#0b0b0b,#1a1a1a);
+    color:#e6c56a;
+    box-shadow:0 0 25px rgba(202,167,74,0.3);
+}
+
+.small{
+    font-size:14px;
+    letter-spacing:2px;
+}
+
+.title{
+    font-size:70px;
+    font-family:'Great Vibes', cursive;
+    margin:10px 0;
+}
+
+.subtitle{
+    font-size:26px;
+    font-family:'Great Vibes', cursive;
+}
+
+.description{
+    margin:25px 0;
+    font-size:16px;
+    line-height:1.5;
+}
+
+.line{
+    border-top:1px solid #caa74a;
+    width:60%;
+    margin:20px auto;
+}
+
+.date{
+    font-size:20px;
+    font-weight:600;
+}
+
+.place{
+    font-size:22px;
+    margin-top:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="invitation">
+
+<div class="small">YOU ARE INVITED TO</div>
+
+<div class="subtitle">Our</div>
+
+<div class="title">Farewell</div>
+
+<div class="subtitle">Party</div>
+
+<div class="description">
+Let's celebrate the wonderful memories, laughter, and achievements 
+before you move on to a new chapter.
+</div>
+
+<div class="line"></div>
+
+<div class="date">
+Monday, March 30 2026 <br>
+AT 2:00 PM
+</div>
+
+<div class="place">Sangford School</div>
+
+<div class="line"></div>
+
+</div>
+
+</body>
 </html>
