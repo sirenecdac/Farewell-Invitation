@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Calligraphy Font -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+<title>Farewell Invitation</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: radial-gradient(circle at center, #111, #000);
+        font-family: 'Georgia', serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #d4af37;
+    }
+
+    .invitation {
+        width: 90%;
+        max-width: 650px;
+        padding: 50px 30px;
+        text-align: center;
+        background: #000;
+        border: 8px double #d4af37;
+        border-radius: 25px;
+        box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+        position: relative;
+        animation: glow 3s infinite alternate;
+    }
+
+    .invitation::before {
+        content: "";
+        position: absolute;
+        top: 15px;
+        bottom: 15px;
+        left: 15px;
+        right: 15px;
+        border: 2px solid rgba(212, 175, 55, 0.5);
+        border-radius: 15px;
+    }
+
+    /* ULTRA BIG Calligraphy Title */
+    h1 {
+        font-family: 'Great Vibes', cursive;
+        font-size: 90px; /* Bigger */
+        margin-bottom: 20px;
+
+        /* Gold Gradient */
+        background: linear-gradient(45deg, #d4af37, #ffd700, #fff2a8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        /* Glow */
+        text-shadow: 0 0 10px rgba(212,175,55,0.8),
+                     0 0 25px rgba(212,175,55,0.7),
+                     0 0 40px rgba(255,215,0,0.6);
+
+        /* Shimmer Animation */
+        background-size: 200% auto;
+        animation: shine 4s linear infinite;
+    }
+
+    @keyframes shine {
+        0% { background-position: 0% center; }
+        100% { background-position: 200% center; }
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-bottom: 25px;
+        letter-spacing: 2px;
+    }
+
+    .divider {
+        width: 80px;
+        height: 2px;
+        background: #d4af37;
+        margin: 20px auto;
+    }
+
+    .content {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    .highlight {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .footer {
+        margin-top: 30px;
+        font-size: 16px;
+        opacity: 0.8;
+    }
+
+    @keyframes glow {
+        0% { box-shadow: 0 0 10px #d4af37; }
+        100% { box-shadow: 0 0 40px #d4af37; }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="invitation">
+    <h1>Farewell Party</h1>
+    <h2>With Gratitude & Memories</h2>
+
+    <div class="divider"></div>
+
+    <div class="content">
+        You are cordially invited to celebrate a memorable evening<br>
+        as we bid farewell with joy and cherished moments.
+        <br><br>
+
+        <span class="highlight">📅 30 March 2026</span><br>
+        <span class="highlight">🕑 2:00 PM – 5:00 PM</span><br>
+        <span class="highlight">📍 Sangford School</span>
+
+        <br><br>
+        Join us for an evening filled with laughter, memories,<br>
+        and heartfelt goodbyes.
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="footer">
+        Dress Code: Elegant ✨<br>
+        We look forward to your presence
+    </div>
+</div>
+
+</body>
+</html>
