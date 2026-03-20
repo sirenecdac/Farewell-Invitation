@@ -2,100 +2,140 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Calligraphy Font -->
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
 <title>Farewell Invitation</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
-
 <style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: radial-gradient(circle at center, #111, #000);
+        font-family: 'Georgia', serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: #d4af37;
+    }
 
-body{
-    background:#111;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    font-family:'Playfair Display', serif;
-}
+    .invitation {
+        width: 90%;
+        max-width: 650px;
+        padding: 50px 30px;
+        text-align: center;
+        background: #000;
+        border: 8px double #d4af37;
+        border-radius: 25px;
+        box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+        position: relative;
+        animation: glow 3s infinite alternate;
+    }
 
-.invitation{
-    width:500px;
-    padding:40px;
-    border:3px solid #caa74a;
-    text-align:center;
-    background:linear-gradient(180deg,#0b0b0b,#1a1a1a);
-    color:#e6c56a;
-    box-shadow:0 0 25px rgba(202,167,74,0.3);
-}
+    .invitation::before {
+        content: "";
+        position: absolute;
+        top: 15px;
+        bottom: 15px;
+        left: 15px;
+        right: 15px;
+        border: 2px solid rgba(212, 175, 55, 0.5);
+        border-radius: 15px;
+    }
 
-.small{
-    font-size:14px;
-    letter-spacing:2px;
-}
+    /* ULTRA BIG Calligraphy Title */
+    h1 {
+        font-family: 'Great Vibes', cursive;
+        font-size: 90px; /* Bigger */
+        margin-bottom: 20px;
 
-.title{
-    font-size:70px;
-    font-family:'Great Vibes', cursive;
-    margin:10px 0;
-}
+        /* Gold Gradient */
+        background: linear-gradient(45deg, #d4af37, #ffd700, #fff2a8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 
-.subtitle{
-    font-size:26px;
-    font-family:'Great Vibes', cursive;
-}
+        /* Glow */
+        text-shadow: 0 0 10px rgba(212,175,55,0.8),
+                     0 0 25px rgba(212,175,55,0.7),
+                     0 0 40px rgba(255,215,0,0.6);
 
-.description{
-    margin:25px 0;
-    font-size:16px;
-    line-height:1.5;
-}
+        /* Shimmer Animation */
+        background-size: 200% auto;
+        animation: shine 4s linear infinite;
+    }
 
-.line{
-    border-top:1px solid #caa74a;
-    width:60%;
-    margin:20px auto;
-}
+    @keyframes shine {
+        0% { background-position: 0% center; }
+        100% { background-position: 200% center; }
+    }
 
-.date{
-    font-size:20px;
-    font-weight:600;
-}
+    h2 {
+        font-size: 20px;
+        margin-bottom: 25px;
+        letter-spacing: 2px;
+    }
 
-.place{
-    font-size:22px;
-    margin-top:10px;
-}
+    .divider {
+        width: 80px;
+        height: 2px;
+        background: #d4af37;
+        margin: 20px auto;
+    }
 
+    .content {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    .highlight {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .footer {
+        margin-top: 30px;
+        font-size: 16px;
+        opacity: 0.8;
+    }
+
+    @keyframes glow {
+        0% { box-shadow: 0 0 10px #d4af37; }
+        100% { box-shadow: 0 0 40px #d4af37; }
+    }
 </style>
 </head>
 
 <body>
 
 <div class="invitation">
+    <h1>Farewell Party</h1>
+    <h2>With Gratitude & Memories</h2>
 
-<div class="small">YOU ARE INVITED TO</div>
+    <div class="divider"></div>
 
-<div class="subtitle">Our</div>
+    <div class="content">
+        You are cordially invited to celebrate a memorable evening<br>
+        as we bid farewell with joy and cherished moments.
+        <br><br>
 
-<div class="title">Farewell</div>
+        <span class="highlight">📅 30 March 2026</span><br>
+        <span class="highlight">🕑 2:00 PM – 5:00 PM</span><br>
+        <span class="highlight">📍 Sangford School</span>
 
-<div class="subtitle">Party</div>
+        <br><br>
+        Join us for an evening filled with laughter, memories,<br>
+        and heartfelt goodbyes.
+    </div>
 
-<div class="description">
-Let's celebrate the wonderful memories, laughter, and achievements 
-before you move on to a new chapter.
-</div>
+    <div class="divider"></div>
 
-<div class="line"></div>
-
-<div class="date">
-Monday, March 30 2026 <br>
-AT 2:00 PM
-</div>
-
-<div class="place">Sangford School</div>
-
-<div class="line"></div>
-
+    <div class="footer">
+        Dress Code: Elegant ✨<br>
+        We look forward to your presence
+    </div>
 </div>
 
 </body>
