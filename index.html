@@ -12,25 +12,25 @@
 <style>
     body {
         margin: 0;
-        padding: 0;
+        padding: 15px;
         background: radial-gradient(circle at center, #111, #000);
         font-family: 'Georgia', serif;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        min-height: 100vh;
         color: #d4af37;
     }
 
     .invitation {
-        width: 90%;
-        max-width: 650px;
-        padding: 50px 30px;
+        width: 100%;
+        max-width: 600px;
+        padding: 30px 20px;
         text-align: center;
         background: #000;
-        border: 8px double #d4af37;
-        border-radius: 25px;
-        box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+        border: 6px double #d4af37;
+        border-radius: 20px;
+        box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
         position: relative;
         animation: glow 3s infinite alternate;
     }
@@ -38,31 +38,28 @@
     .invitation::before {
         content: "";
         position: absolute;
-        top: 15px;
-        bottom: 15px;
-        left: 15px;
-        right: 15px;
-        border: 2px solid rgba(212, 175, 55, 0.5);
-        border-radius: 15px;
+        top: 10px;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        border: 1.5px solid rgba(212, 175, 55, 0.5);
+        border-radius: 12px;
     }
 
-    /* ULTRA BIG Calligraphy Title */
+    /* Responsive Title */
     h1 {
         font-family: 'Great Vibes', cursive;
-        font-size: 90px; /* Bigger */
-        margin-bottom: 20px;
+        font-size: clamp(42px, 10vw, 80px);
+        margin-bottom: 15px;
 
-        /* Gold Gradient */
         background: linear-gradient(45deg, #d4af37, #ffd700, #fff2a8);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 
-        /* Glow */
         text-shadow: 0 0 10px rgba(212,175,55,0.8),
                      0 0 25px rgba(212,175,55,0.7),
                      0 0 40px rgba(255,215,0,0.6);
 
-        /* Shimmer Animation */
         background-size: 200% auto;
         animation: shine 4s linear infinite;
     }
@@ -73,37 +70,37 @@
     }
 
     h2 {
-        font-size: 20px;
-        margin-bottom: 25px;
+        font-size: clamp(14px, 4vw, 20px);
+        margin-bottom: 20px;
         letter-spacing: 2px;
     }
 
     .divider {
-        width: 80px;
+        width: 60px;
         height: 2px;
         background: #d4af37;
-        margin: 20px auto;
+        margin: 15px auto;
     }
 
     .content {
-        font-size: 18px;
-        line-height: 1.8;
+        font-size: clamp(14px, 4vw, 18px);
+        line-height: 1.6;
     }
 
     .highlight {
-        font-size: 22px;
+        font-size: clamp(16px, 4.5vw, 22px);
         font-weight: bold;
     }
 
     .footer {
-        margin-top: 30px;
-        font-size: 16px;
-        opacity: 0.8;
+        margin-top: 25px;
+        font-size: clamp(13px, 3.5vw, 16px);
+        opacity: 0.85;
     }
 
     @keyframes glow {
         0% { box-shadow: 0 0 10px #d4af37; }
-        100% { box-shadow: 0 0 40px #d4af37; }
+        100% { box-shadow: 0 0 35px #d4af37; }
     }
 </style>
 </head>
