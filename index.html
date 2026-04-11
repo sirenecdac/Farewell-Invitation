@@ -9,209 +9,141 @@
 <title>Farewell Invitation</title>
 
 <style>
-    body {
-        margin: 0;
-        padding: 0;
-        background: radial-gradient(circle at center, #111, #000);
-        font-family: 'Georgia', serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        color: #d4af37;
-        overflow: hidden;
-    }
+body {
+    margin: 0;
+    padding: 20px 10px;
+    background: radial-gradient(circle at center, #111, #000);
+    font-family: 'Georgia', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #d4af37;
+}
 
-    /* ✨ SPARKLES */
-    .sparkle {
-        position: fixed;
-        width: 4px;
-        height: 4px;
-        background: gold;
-        border-radius: 50%;
-        opacity: 0.8;
-        animation: float 6s linear infinite;
-    }
+.invitation {
+    width: 95%;
+    max-width: 650px;
+    padding: 30px 20px;
+    text-align: center;
+    background: #000;
+    border: 6px double #d4af37;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
+    position: relative;
+    animation: glow 3s infinite alternate;
+}
 
-    @keyframes float {
-        from {
-            transform: translateY(100vh) scale(0.5);
-            opacity: 0;
-        }
-        50% {
-            opacity: 1;
-        }
-        to {
-            transform: translateY(-10vh) scale(1);
-            opacity: 0;
-        }
-    }
+.invitation::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    border: 2px solid rgba(212, 175, 55, 0.5);
+    border-radius: 12px;
+}
 
-    .invitation {
-        width: 90%;
-        max-width: 650px;
-        padding: 50px 30px;
-        text-align: center;
-        background: #000;
-        border: 8px double #d4af37;
-        border-radius: 25px;
-        box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
-        position: relative;
-        animation: glow 3s infinite alternate;
-        z-index: 2;
-    }
+/* RESPONSIVE TITLE */
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(40px, 10vw, 80px);
 
-    .invitation::before {
-        content: "";
-        position: absolute;
-        top: 15px;
-        bottom: 15px;
-        left: 15px;
-        right: 15px;
-        border: 2px solid rgba(212, 175, 55, 0.5);
-        border-radius: 15px;
-    }
+    background: linear-gradient(45deg, #d4af37, #ffd700, #fff2a8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
-    /* 🌸 FLORAL CORNERS */
-    .corner {
-        position: absolute;
-        width: 80px;
-        height: 80px;
-        z-index: 3;
-    }
+    text-shadow: 0 0 10px rgba(212,175,55,0.8),
+                 0 0 25px rgba(212,175,55,0.7),
+                 0 0 40px rgba(255,215,0,0.6);
 
-    .top-left { top: -10px; left: -10px; }
-    .top-right { top: -10px; right: -10px; transform: scaleX(-1); }
-    .bottom-left { bottom: -10px; left: -10px; transform: scaleY(-1); }
-    .bottom-right { bottom: -10px; right: -10px; transform: scale(-1); }
+    background-size: 200% auto;
+    animation: shine 4s linear infinite;
+}
 
-    h1 {
-        font-family: 'Great Vibes', cursive;
-        font-size: 90px;
+h2 {
+    font-size: clamp(14px, 4vw, 20px);
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
 
-        background: linear-gradient(45deg, #d4af37, #ffd700, #fff2a8);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+.divider {
+    width: 60px;
+    height: 2px;
+    background: #d4af37;
+    margin: 15px auto;
+}
 
-        text-shadow: 0 0 10px rgba(212,175,55,0.8),
-                     0 0 25px rgba(212,175,55,0.7),
-                     0 0 40px rgba(255,215,0,0.6);
+.content {
+    font-size: clamp(14px, 4vw, 18px);
+    line-height: 1.6;
+}
 
-        background-size: 200% auto;
-        animation: shine 4s linear infinite;
-    }
+.highlight {
+    font-size: clamp(16px, 4.5vw, 22px);
+    font-weight: bold;
+}
 
-    @keyframes shine {
-        0% { background-position: 0% center; }
-        100% { background-position: 200% center; }
-    }
+.footer {
+    margin-top: 25px;
+    font-size: clamp(13px, 3.5vw, 16px);
+}
 
-    h2 {
-        font-size: 20px;
-        margin-bottom: 25px;
-        letter-spacing: 2px;
-    }
+/* GLOW */
+@keyframes glow {
+    0% { box-shadow: 0 0 10px #d4af37; }
+    100% { box-shadow: 0 0 35px #d4af37; }
+}
 
-    .divider {
-        width: 80px;
-        height: 2px;
-        background: #d4af37;
-        margin: 20px auto;
-    }
+/* SHINE */
+@keyframes shine {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+}
 
-    .content {
-        font-size: 18px;
-        line-height: 1.8;
-    }
+/* CONDUCTED BOX */
+.conducted-box {
+    margin-top: 25px;
+    padding: 12px 8px;
+    border: 2px solid rgba(212, 175, 55, 0.6);
+    border-radius: 12px;
+    background: rgba(212, 175, 55, 0.05);
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
+    animation: glowBox 3s infinite alternate;
+}
 
-    .highlight {
-        font-size: 22px;
-        font-weight: bold;
-    }
+.conducted-title {
+    font-size: clamp(14px, 4vw, 18px);
+    letter-spacing: 2px;
+}
 
-    .footer {
-        margin-top: 30px;
-        font-size: 16px;
-        opacity: 0.9;
-    }
+.conducted-name {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(22px, 6vw, 32px);
 
-    @keyframes glow {
-        0% { box-shadow: 0 0 10px #d4af37; }
-        100% { box-shadow: 0 0 40px #d4af37; }
-    }
+    background: linear-gradient(45deg, #d4af37, #ffd700, #fff2a8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-    /* CONDUCTED BOX */
-    .conducted-box {
-        margin-top: 30px;
-        padding: 10px 8px;
-        border: 2px solid rgba(212, 175, 55, 0.6);
-        border-radius: 15px;
-        background: rgba(212, 175, 55, 0.05);
-        box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
-        animation: glowBox 3s infinite alternate;
-    }
+.mini-divider {
+    width: 50px;
+    height: 2px;
+    background: #d4af37;
+    margin: 8px auto;
+}
 
-    .conducted-title {
-        font-size: 18px;
-        letter-spacing: 1.5px;
-    }
-
-    .conducted-name {
-        font-family: 'Great Vibes', cursive;
-        font-size: 32px;
-
-        background: linear-gradient(45deg, #d4af37, #ffd700, #fff2a8);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .mini-divider {
-        width: 60px;
-        height: 2px;
-        background: #d4af37;
-        margin: 10px auto;
-    }
-
-    @keyframes glowBox {
-        0% { box-shadow: 0 0 10px #d4af37; }
-        100% { box-shadow: 0 0 25px #ffd700; }
-    }
+@keyframes glowBox {
+    0% { box-shadow: 0 0 8px #d4af37; }
+    100% { box-shadow: 0 0 20px #ffd700; }
+}
 </style>
 </head>
 
 <body>
 
-<!-- ✨ Sparkles (multiple for effect) -->
-<div class="sparkle" style="left:10%; animation-delay:0s;"></div>
-<div class="sparkle" style="left:25%; animation-delay:2s;"></div>
-<div class="sparkle" style="left:40%; animation-delay:4s;"></div>
-<div class="sparkle" style="left:60%; animation-delay:1s;"></div>
-<div class="sparkle" style="left:75%; animation-delay:3s;"></div>
-<div class="sparkle" style="left:90%; animation-delay:5s;"></div>
-
 <div class="invitation">
-
-    <!-- 🌸 Floral SVG corners -->
-    <svg class="corner top-left" viewBox="0 0 100 100">
-        <path d="M0,100 C40,60 60,40 100,0" stroke="#d4af37" fill="none" stroke-width="2"/>
-        <circle cx="30" cy="70" r="4" fill="#ffd700"/>
-    </svg>
-
-    <svg class="corner top-right" viewBox="0 0 100 100">
-        <path d="M0,100 C40,60 60,40 100,0" stroke="#d4af37" fill="none" stroke-width="2"/>
-        <circle cx="30" cy="70" r="4" fill="#ffd700"/>
-    </svg>
-
-    <svg class="corner bottom-left" viewBox="0 0 100 100">
-        <path d="M0,100 C40,60 60,40 100,0" stroke="#d4af37" fill="none" stroke-width="2"/>
-        <circle cx="30" cy="70" r="4" fill="#ffd700"/>
-    </svg>
-
-    <svg class="corner bottom-right" viewBox="0 0 100 100">
-        <path d="M0,100 C40,60 60,40 100,0" stroke="#d4af37" fill="none" stroke-width="2"/>
-        <circle cx="30" cy="70" r="4" fill="#ffd700"/>
-    </svg>
-
     <h1>Farewell Party</h1>
     <h2>With Gratitude & Memories</h2>
 
@@ -222,10 +154,10 @@
         as we bid farewell with joy and cherished moments.
         <br><br>
 
-        <span class="highlight">📅 30 March 2026</span><br>
+        <span class="highlight">📅 15 April 2026</span><br>
         <span class="highlight">🕑 2:00 PM – 5:00 PM</span><br>
         <span class="highlight">📍 Sangford School</span>
-        
+
         <br><br>
         Join us for an evening filled with laughter, memories,<br>
         and heartfelt goodbyes.
@@ -239,8 +171,10 @@
     </div>
 
     <div class="conducted-box">
+        <div class="mini-divider"></div>
         <p class="conducted-title">✨ Organised by ✨</p>
-        <p class="conducted-name">The Students of Grade 9</p>
+        <p class="conducted-name">Grade 9, your Juniors</p>
+        <div class="mini-divider"></div>
     </div>
 
 </div>
